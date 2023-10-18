@@ -1,172 +1,173 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 400,
-    "height": 300,
-    "title": "GDP  vs Infant Mortality Rate",
-    "data": {
-      "url": "https://raw.githubusercontent.com/AndreasAalbers/Vis-2/main/world-data-2021.csv"
-    },
-    "params": [
-      {
-        "name": "GDP_Above",
-        "value": 0,
-        "bind": {
-          "input": "range",
-          "min": 0,
-          "max": 110000,
-          "step": 1000,
-          "name": "GDP: "
-        }
-      },
-      {
-        "name": "Mortality_Above",
-        "value": 0,
-        "bind": {
-          "input": "range",
-          "min": 0,
-          "max": 80,
-          "step": 1,
-          "name": "Mortality: "
-        }
-      },
-      {
-        "name": "continent_selection",
-        "bind": {
-          "input": "select",
-          "options": [
-            null,
-            "North America",
-            "South America",
-            "Europe",
-            "Africa",
-            "Asia",
-            "Oceania"
-          ],
-          "labels": [
-            "Show All",
-            "North America",
-            "South America",
-            "Europe",
-            "Africa",
-            "Asia",
-            "Oceania"
-          ],
-          "name": "Continent Selection: "
-        }
-      }
-    ],
-  
-    "transform": [
-      {"filter": "datum.GDP > GDP_Above"},
-      {
-        "filter": "continent_selection == null || datum.continent == continent_selection"
-      },
-      {"filter": "datum.Mortality > Mortality_Above"}
-    ],
-    
-    "encoding": {
-      "x": {
-        "field": "GDP",
-        "title": "GDP per capita (USD)",
-        "type": "quantitative",
-        "axis": {"tickCount": 5},
-        "scale": {"type": "linear", "domain": [-2000, 100000]}
-      },
-      "y": {
-        "field": "Mortality",
-        "title": "Infant Mortality Rate (per 1000 babies)",
-        "type": "quantitative",
-        "axis": {"tickCount": 6},
-        "scale": {"type": "linear", "domain": [-2, 100]}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 300,
+  "title": "GDP  vs Infant Mortality Rate",
+  "data": {
+    "url": "https://raw.githubusercontent.com/AndreasAalbers/Vis-2/main/world-data-2021.csv"
+  },
+
+  "params": [
+    {
+      "name": "GDP_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 100000,
+        "step": 1000,
+        "name": "GDP: "
       }
     },
+    {
+      "name": "Mortality_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 78,
+        "step": 1,
+        "name": "Mortality: "
+      }
+    },
+    {
+      "name": "continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "labels": [
+          "Show All",
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+
+  "transform": [
+    {"filter": "datum.GDP > GDP_Above"},
+    {
+      "filter": "continent_selection == null || datum.continent == continent_selection"
+    },
+    {"filter": "datum.Mortality > Mortality_Above"}
+  ],
   
-    "layer": [
-      {
-        "selection": {
-          "continent_highlight": {
-            "type": "multi",
-            "fields": ["Continent"],
-            "bind": "legend"
+  "encoding": {
+    "x": {
+      "field": "GDP",
+      "title": "GDP per capita (USD)",
+      "type": "quantitative",
+      "axis": {"tickCount": 5},
+      "scale": {"type": "linear", "domain": [-2000, 100200]}
+    },
+    "y": {
+      "field": "Mortality",
+      "title": "Infant Mortality Rate (per 1000 babies)",
+      "type": "quantitative",
+      "axis": {"tickCount": 6},
+      "scale": {"type": "linear", "domain": [-2, 100]}
+    }
+  },
+
+  "layer": [
+    {
+      "selection": {
+        "continent_highlight": {
+          "type": "multi",
+          "fields": ["Continent"],
+          "bind": "legend"
+        }
+      },
+      "mark": "circle",
+      "encoding": {
+        "size": {
+          "field": "population",
+          "title": "Population",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+            "range": [10, 50, 150, 200, 300, 400]
+          },
+          "legend": {"format": ".1s"}
+        },
+        "color": {
+          "field": "continent",
+          "title": "Continent",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "North America",
+              "South America",
+              "Europe",
+              "Africa",
+              "Asia",
+              "Oceania"
+            ],
+            "range": [
+              "#e41a1c",
+              "#984ea3",
+              "#ff7f00",
+              "#a6cee3",
+              "#377eb8",
+              "#a65628"
+            ]
           }
         },
-        "mark": "circle",
-        "encoding": {
-          "size": {
-            "field": "population",
-            "title": "Population",
-            "type": "quantitative",
-            "scale": {
-              "type": "threshold",
-              "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
-              "range": [10, 50, 150, 200, 300, 400]
-            },
-            "legend": {"format": ".1s"}
-          },
-          "color": {
-            "field": "continent",
-            "title": "Continent",
-            "type": "nominal",
-            "scale": {
-              "domain": [
-                "North America",
-                "South America",
-                "Europe",
-                "Africa",
-                "Asia",
-                "Oceania"
-              ],
-              "range": [
-                "#e41a1c",
-                "#984ea3",
-                "#ff7f00",
-                "#a6cee3",
-                "#377eb8",
-                "#a65628"
-              ]
-            }
-          },
-          "opacity": {
-            "condition": {"selection": "continent_highlight", "value": 0.6},
-            "value": 0.2
-          },
-          "tooltip": [
-            {"field": "Country", "type": "nominal"},
-            {"field": "GDP", "type": "quantitative", "format": ","}
-          ]
-        }
-      },
-      {
-        "mark": {
-          "type": "text",
-          "align": "right",
-          "baseline": "middle",
-          "dx": 30,
-          "fontSize": 11.5,
-          "fontStyle": "italic"
+        "opacity": {
+          "condition": {"selection": "continent_highlight", "value": 0.6},
+          "value": 0.2
         },
-        "encoding": {
-          "text": {"field": "Country", "type": "nominal"},
-          "color": {"value": "black"},
-          "opacity": {
-            "condition": {
-              "test": "datum['Country'] == 'United Kingdom' || datum['Country'] == 'Somalia' ||  datum['Country'] == 'Australia' || datum['Country'] == 'Ireland' || datum['Country'] == 'South Africa'",
-              "value": 1
-            },
-            "value": 0
-          },
-          "tooltip": [
-            {"field": "Country", "type": "nominal"},
-            {"field": "GDP", "type": "quantitative", "format": ","},
-            {"field": "Population", "type": "quantitative", "format": ","},
-            {
-              "field": "Mortality",
-              "type": "quantitative",
-              "title": "Mortality rate"
-            }
-          ]
-        }
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"field": "GDP", "type": "quantitative", "format": ","}
+        ]
       }
-    ],
-    "config": {}
-  }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": 40,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "Country", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Country'] == 'United Kingdom' || datum['Country'] == 'Somalia' ||  datum['Country'] == 'Australia' || datum['Country'] == 'Ireland' || datum['Country'] == 'South Africa'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"field": "GDP", "type": "quantitative", "format": ","},
+          {"field": "Population", "type": "quantitative", "format": ","},
+          {
+            "field": "Mortality",
+            "type": "quantitative",
+            "title": "Mortality rate"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
