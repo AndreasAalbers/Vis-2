@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 400,
   "height": 300,
-  "title": "GDP  vs Infant Mortality Rate",
+  "title": "Infant Mortality Rate vs GDP",
   "data": {
     "url": "https://raw.githubusercontent.com/AndreasAalbers/Vis-2/main/world-data-2021.csv"
   },
@@ -156,10 +156,11 @@
           },
           "value": 0
         },
+        
         "tooltip": [
           {"field": "Country", "type": "nominal"},
           {"field": "GDP", "type": "quantitative", "format": ","},
-          {"field": "Population", "type": "quantitative", "format": ","},
+          {"field": "population", "type": "quantitative", "format": ","},
           {
             "field": "Mortality",
             "type": "quantitative",

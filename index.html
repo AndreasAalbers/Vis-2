@@ -15,7 +15,7 @@
 <link href="stylesheet.css" rel="stylesheet">
 
 
-<title>Our world in data </title>
+<title>Global Insights 2021: A Visual Exploration of World Data</title>
 
 </head>
 <body>
@@ -24,8 +24,13 @@
 
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h1><span style="font-size: 36px;">Our world in data</h1></span></h1>
-        <p style="font-weight: 100; color:#606060;">Research and data is an effective tool to make progress against the world's largest problems. Our world in data is a research team based at the University of Oxford who created a worldwide database which has information about nearly all countries.All data is from the year 2020. Database can be accessed from <a href="https://databank.worldbank.org/source/world-development-indicators/">here.</a> <a href="https://raw.githubusercontent.com/Sancho17/FIT3179/main/editedcsv.csv">Here</a> is the clean one used in this visualisation</p>
+        <h1><span style="font-size: 36px;">Global Insights 2021: A Visual Exploration of World Data</h1></span></h1>
+        <p style="font-weight: 100; color:#606060;">It is crucial to stay informed about global events because our interconnected world makes every development, no matter 
+            how distant, relevant to our lives. Understanding what is happening around the globe enables us to make informed decisions, whether it be in politics, economics, 
+            or even our personal lives. 
+            <br>
+            <br>The database can be accessed from <a href="https://databank.worldbank.org/source/world-development-indicators/">here.</a>
+            <br>The clean version used in this visualisation can be accessed from <a href="https://raw.githubusercontent.com/AndreasAalbers/Vis-2/main/world-data-2021.csv">here</a>.</p>
       </div>
     </div>
 
@@ -36,18 +41,34 @@
         </div>
         <div class="pure-u-1-3">
           <div class="choropleth map">
-            <h2>Mortality rates around the world</h2>
-            <p style="font-weight: 100; color:#606060;">This choropleth map shows the infant mortality rates for 1000 infants are born.San Marino was the lowest with only 6.7 and another surprising addition was Puerto Rico with just 7.3 Quite interesting as it is quite often labelled as a developing nation. You should be able to notice a higher mortality rate in Africa, with Niger having the highest number.<br><br> Use the slider to filter the data.  </span></p>
+            <h2>Population Density around the world</h2>
+            <p style="font-weight: 100; color:#606060;">Take a moment to embark on this journey across the globe through the lens of the Choropleth Map, portraying Population Density 
+                (per kilometre squared). The darker shades of blue indicate a higher density count, providing an immediate visual indicator of which parts of the globe hold a larger population. 
+                <br><br>
+                Interactive features: hover over each country to view their specific details and use the density count slider which will allow you to focus on specific regions with magnified 
+                data values. 
+                <br><br>
+                Note: Grey areas indicate countries with invalid data.  
+                  </span></p>
           </div>
         </div>
     </div>
   
+
     <!--Bubble chart-->
     <div class="pure-g">
         <div class="pure-u-1-3">
           <div class="Bubblechart">
-            <h2>Life expectancy vs. GDP per capita</h2>
-            <p style="font-weight: 100; color:#606060;">Vertical axis shows life expectancy and the horizontal shows real GDP per capita in USD. GDP is the market value of all goods and services a country produces within a certain amount of time. In this case it is data from 2020. As you can see there seems to be a relationship between GDP and life expectancy. Sadly once again Africa seems to have the lowest GDP and life expectancy. <br><br> Use the content select to select a specific continent and the GDP slider to filter by GDP </p>
+            <h2>Infant Mortality Rate vs GDP per capita</h2>
+            <p style="font-weight: 100; color:#606060;">Infant Mortality Rate and GDP per capita are two distinct but interconnected measures used to assess a countries overall well-being. 
+                The Infant Mortality Rate, expressed as the number of infant deaths per 1,000 live births, provides insight into the quality of healthcare, sanitation, and social conditions in 
+                a nation. 
+                <br><br>
+                GDP per capita represents the average income per person in a country, which is indicative of its economic prosperity. There is often an inverse relationship between 
+                these two measures; higher GDP per capita tends to be associated with lower infant mortality rates. 
+                <br><br>
+                Interactive features: hover over each bubble to view specific details. Use the ‘GDP’ and ‘Mortality’ sliders to focus on specific regions with magnified data values. Use the drop down menu to select a specific continent. 
+                 </p>
           </div>
         </div>
         <div class="pure-u-2-3">
@@ -64,7 +85,16 @@
         <div class="pure-u-1-3">
           <div class="unemployment barchart">
             <h2>A look into unemployment rates</h2>
-            <p style="font-weight: 100; color:#606060;"> Uemployment rates can also give us a look into how a country is doing. Unemployment is a measure of workers who want to work but are unable to find jobs. By having a high unemployment rate the country wiil have a lower economic output. But very low unemployment can also have negative consequences such as inflation and reduced productivity. Economists recommend an unemployment rate below 6% as COVID 19 has impacted the job market. Kosovo had the highest unemployment rate while Qatar and Cambodia had the lowest </p>
+            <p style="font-weight: 100; color:#606060;"> 
+                Unemployment rates are another important concept which indicate how well a country is travelling. Unemployment is a measure of workers who want to work but are unable to 
+                find jobs. 
+                <br><br>
+                By having a high unemployment rate, the country will have a lower economic output. Furthermore, a very low unemployment rate can also have negative consequences 
+                such as inflation and reduced productivity. 
+                <br><br> 
+                Countries such as South Africa and Iraq can be seen to have much higher rates when compared to other countries such as Vietnam 
+                and Ethiopia.</p>  
+                 </p>
           </div>
         </div>
     </div>
@@ -74,7 +104,17 @@
       <div class="pure-u-1-3">
         <div class="pollutionmap">
           <h2>Which countries pollute the most?</h2>
-          <p style="font-weight: 100; color:#606060;"> CO2(carbon dioxide) emissions per capita are measured as the total amount of CO2 divided by the total population. Countries which gain energy from renewables have much lower CO2 emissions compared to countries which gain energy from renewables. Countries which are rich in oil also are high due to oil refining.Some of the richer countries may have high CO2 due to imports from other countries. Saudi Arabia had the highest CO2 emissions per capita at 16 tons while Chad had the lowest at 0.06. <br><br> Use the slider to filter the data. </p>
+          <p style="font-weight: 100; color:#606060;"> CO2 (carbon dioxide) emissions per capita are measured as the total amount of CO2 divided by the total population. 
+            Countries which gain energy from renewables have much lower CO2 emissions compared to countries which do not. Countries which are rich in oil are also high due to 
+            oil refining. 
+            <br><br>
+            Furthermore, some of the richer countries have high CO2 emissions due to imports from other countries. Canada had the highest CO2 emissions per capita 
+            at 14.86 metric tons while India had the lowest at 1.895.
+            <br><br>
+            Interactive features: hover over each slice of the chart to view specific details on each selected country.
+            <br><br>
+            Note: t CO2/cap = metric tons of carbon dioxide emissions per capita
+             </p>
         </div>
       </div>
       
@@ -88,12 +128,20 @@
 <!--Wage Map-->
     <div class="pure-g">
         <div class="pure-u-2-3">
-          <div id="internet"  class="vis-container"></div>
+          <div id="wage"  class="vis-container"></div>
         </div>
+
         <div class="pure-u-1-3">
           <div class="internet map"> 
-            <h2>Which countries are the most connected?</h2>
-            <p style="font-weight: 100; color:#606060;">Internet is such a powerful tool and most people can not live without it, it is quite interesting to see that a large number of the population does not use the internet at all. Especially in developing countries such as India, Pakistan, etc. Internet usage could also be low due to other factors, for example Africa is huge and a large amount of the population live in the rural parts where it is hard to put the infrustructure in place. Another reason could be the price of internet. Somalia only has 2% of the population connected to the internet while Iceland on the other hand hat the largest at 98% <br><br> Use the slider to filter the data.</p>
+            <h2>Minimum Wage across the globe</h2>
+            <p style="font-weight: 100; color:#606060;">Minimum wage is the lowest legally mandated hourly wage that employers are required to pay their workers. It is a fundamental labor policy tool 
+                used by governments to ensure that workers receive a fair and liveable income. It helps safeguard workers from exploitative labor practices, reduces income inequality, and provides a basic 
+                standard of living. 
+                <br><br>
+                Interactive features: hover over each country to view their specific details and use the wage slider which will allow you to focus on specific regions with magnified data values.
+                <br><br>
+                Note: Grey areas indicate countries with invalid data.
+                </p>
           </div>
         </div>
     </div>

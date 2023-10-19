@@ -24,7 +24,7 @@
     "encoding": {
       "y": {"field": "a", "type": "nominal" ,"title": "Country"},
       "color": {"value": "#4682b4"},
-      "x": {"field": "b", "title": "Unemployment rate %", "type": "quantitative", "scale": {"domain": [0, 35]}}
+      "x": {"field": "b", "title": "Unemployment rate (%)", "type": "quantitative", "scale": {"domain": [0, 35]}}
 
 
     },

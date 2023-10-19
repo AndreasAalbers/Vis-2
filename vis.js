@@ -20,6 +20,6 @@ vegaEmbed('#emissions', vg_3, {"actions" : false}).then(function(result) {
 }).catch(console.error);
 
 var vg_4 = "json/Wagemap.json";
-vegaEmbed('#internet', vg_4, {"actions" : false}).then(function(result) {
+vegaEmbed('#wage', vg_4, {"actions" : false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
