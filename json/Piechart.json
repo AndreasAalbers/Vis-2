@@ -1,0 +1,32 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple pie chart with tooltip",
+    "title": "CO2 Emissions per capita by country (metric tons) ",
+    "width": 400, 
+    "height": 300, 
+    "data": {
+      "values": [
+        {"countries": "United States", "value": 14.237},
+        {"countries": "China", "value": 8.727},
+        {"countries": "Russia", "value": 13.524},
+        {"countries": "Germany", "value": 8.063},
+        {"countries": "United Kingdom", "value": 4.954},
+        {"countries": "Japan", "value": 8.601},
+        {"countries": "Inida", "value": 1.895},
+        {"countries": "France", "value": 4.584},
+        {"countries": "Canada", "value": 14.860},
+        {"countries": "Ukraine", "value": 4.277}
+      ]
+    },
+    "mark": "arc",
+    "encoding": {
+      "theta": {"field": "value", "type": "quantitative"},
+      "color": {"field": "countries", "type": "nominal", "legend": {"title": "Countries"}},
+      "tooltip": [
+        {"field": "countries", "type": "nominal", "title": "Country"},
+        {"field": "value", "type": "quantitative", "title": "CO2 Emissions (t CO2/cap)"}
+      ]
+    },
+    "view": {"stroke": null}
+  }
+  
