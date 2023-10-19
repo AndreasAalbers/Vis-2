@@ -1,7 +1,7 @@
 { 
 
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Population Density (per km/sqaure)",
+    "title": "Population Density (per kilometre squared)",
     "width": 500,
     "height": 300,
     "data": {
@@ -52,7 +52,7 @@
         "encoding": {
           "color": {
             "field": "Density",
-            "title": "Quanitity",
+            "title": "Density Count",
             "type": "quantitative",
             "scale": {
               "type": "threshold",

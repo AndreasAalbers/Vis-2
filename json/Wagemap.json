@@ -1,7 +1,7 @@
 { 
 
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Minimum Wage (per hour)",
+    "title": "Minimum Wage (/h) ",
     "width": 500,
     "height": 300,
     "data": {
@@ -18,7 +18,7 @@
           "min": 0,
           "max": 12,
           "step": 1,
-          "name": "Wage (AUD $)"
+          "name": "wage (AUD $)"
         }  }
       ],
     "layer":[
