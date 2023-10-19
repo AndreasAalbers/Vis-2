@@ -94,7 +94,7 @@
       "mark": "circle",
       "encoding": {
         "size": {
-          "field": "Population",
+          "field": "population",
           "title": "Population",
           "type": "quantitative",
           "scale": {
@@ -160,7 +160,7 @@
         "tooltip": [
           {"field": "Country", "type": "nominal"},
           {"field": "GDP", "type": "quantitative", "format": ","},
-          {"field": "Population", "type": "quantitative", "format": ","},
+          {"field": "population", "type": "quantitative", "format": ","},
           {
             "field": "Mortality",
             "type": "quantitative",
