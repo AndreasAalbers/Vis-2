@@ -1,4 +1,4 @@
-Country,Density,Mortality,GDP,Unemployment,emissions,continent,wage,Population
+Country,Density,Mortality,GDP,Unemployment,emissions,continent,wage,population
 Afghanistan,61.48055441,43.4,363.6740871,5.58,7380,Asia,0.43,39074280
 Albania,102.6155474,8.4,6377.203096,..,5600,Europe,1.12,2877239
 Algeria,18.54860331,19.2,3700.311195,..,145100,Africa,0.95,43984569

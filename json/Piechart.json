@@ -2,8 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A simple pie chart with tooltip",
     "title": "CO2 Emissions per capita by country (metric tons) ",
-    "width": 450, 
-    "height": 350, 
+    "width": 500, 
+    "height": 450, 
     "data": {
       "values": [
         {"countries": "United States", "value": 14.237},
